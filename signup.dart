@@ -1,26 +1,11 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
 
-void main() {
-  runApp(new MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new MyHomePage(),
-    );
-  }
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -29,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Stack(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.fromLTRB(25.0, 150, 0, 0),
+                padding: EdgeInsets.fromLTRB(25.0, 200, 0, 0),
                 child: Text(
                   'Hello ',
                   style: TextStyle(
@@ -39,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(90.0, 200, 0, 0),
+                padding: EdgeInsets.fromLTRB(105.0, 250, 0, 0),
                 child: Text(
                   'There',
                   style: TextStyle(
@@ -49,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(260.0, 105, 0, 0),
+                padding: EdgeInsets.fromLTRB(280.0, 153, 0, 0),
                 child: Text(
                   '.',
                   style: TextStyle(
@@ -63,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         Container(
           padding: EdgeInsets.only(
-            top: 10.0,
+            top: 35.0,
             left: 20.0,
             right: 20.0,
           ),
@@ -84,10 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(children: <Widget>[
             TextField(
               decoration: InputDecoration(
-                  labelText: 'PASSWORD',
-                  counterStyle: TextStyle(
-                    fontSize: 10,
-                  )),
+                labelText: 'PASSWORD',
+              ),
             )
           ]),
         ),
@@ -130,8 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               padding: EdgeInsets.fromLTRB(40, 10, 35, 10),
               disabledColor: Colors.blue[400],
-              //  onPressed: () {},
-            ),
+              onPressed: null,
+            )
           ]),
         ),
         Container(
